@@ -1,0 +1,41 @@
+# .gitignore
+*.pkl
+*.pyc
+__pycache__/
+.env
+.secrets/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Streamlit
+.streamlit/
+
+# Large model files (if any)
+*.pkl
+*.joblib
+
+# OS
+.DS_Store
+Thumbs.db

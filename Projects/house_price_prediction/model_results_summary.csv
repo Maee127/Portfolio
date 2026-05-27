@@ -1,0 +1,9 @@
+Model,R² Score,Type
+Stacking (Linear),0.8589,Stacking
+Stacking (Ridge),0.8589,Stacking
+Stacking (Lasso),0.8589,Stacking
+Voting Ensemble,0.8585,Ensemble
+Stacking (GBM),0.8563,Stacking
+LightGBM,0.8559,Individual
+XGBoost,0.8493,Individual
+Gradient Boosting,0.8481,Individual
