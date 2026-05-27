@@ -50,8 +50,8 @@ def load_models():
 def load_models():
     """Load trained model and scaler from Projects folder"""
     # Use absolute path to where your models are
-    model_path = r'C:\Users\parsayan\VS codes\ML-Portfolio\Portfolio\Projects\house_price_prediction\best_model.pkl'
-    scaler_path = r'C:\Users\parsayan\VS codes\ML-Portfolio\Portfolio\Projects\house_price_prediction\scaler.pkl'
+    model_path = r'C:\Users\parsayan\VScodes\ML-Portfolio\Portfolio\Projects\house_price_prediction\best_model.pkl'
+    scaler_path = r'C:\Users\parsayan\VScodes\ML-Portfolio\Portfolio\Projects\house_price_prediction\scaler.pkl'
     
     model = joblib.load(model_path)
     scaler = joblib.load(scaler_path)
