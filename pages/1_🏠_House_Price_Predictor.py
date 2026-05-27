@@ -20,20 +20,25 @@ st.set_page_config(
 # ============================================
 @st.cache_resource
 def load_models():
-    """Load trained model and scaler from the correct location"""
+    """Load trained model and scaler"""
     import os
     
-    # Get the directory where this file is located
+    # Get the directory where THIS file is located
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    # Go up one level to Portfolio folder, then into Projects
-    base_dir = os.path.dirname(current_dir)
+    # Go up one level to Portfolio folder
+    portfolio_dir = os.path.dirname(current_dir)
     
-    # Look for model files in Projects/house_price_prediction/
-    model_path = os.path.join(base_dir, 'Projects', 'house_price_prediction', 'best_model.pkl')
-    scaler_path = os.path.join(base_dir, 'Projects', 'house_price_prediction', 'scaler.pkl')
+    # Build paths (works on both Windows and Linux)
+    model_path = os.path.join(portfolio_dir, 'Projects', 'house_price_prediction', 'best_model.pkl')
+    scaler_path = os.path.join(portfolio_dir, 'Projects', 'house_price_prediction', 'scaler.pkl')
     
-    # Debug: print paths to terminal
+    # For debugging (optional - remove after it works)
     st.write(f"Looking for model at: {model_path}")
+    
+    # Check if files exist
+    if not os.path.exists(model_path):
+        st.error(f"Model file not found at: {model_path}")
+        st.stop()
     
     model = joblib.load(model_path)
     scaler = joblib.load(scaler_path)
