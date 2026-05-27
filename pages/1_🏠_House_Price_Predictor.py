@@ -18,18 +18,26 @@ st.set_page_config(
 # ============================================
 # LOAD MODELS FROM PROJECTS FOLDER
 # ============================================
-# @st.cache_resource
-# def load_models():
-#     """Load trained model and scaler from Projects folder"""
-#     # Get the current directory
-#     current_dir = os.path.dirname(os.path.abspath(__file__))
-#     # Go up one level to Portfolio, then into Projects/house_price_prediction
-#     base_dir = os.path.dirname(current_dir)
-#     model_path = os.path.join(base_dir, 'Projects', 'house_price_prediction', 'best_model.pkl')
-#     scaler_path = os.path.join(base_dir, 'Projects', 'house_price_prediction', 'scaler.pkl')
-#     model = joblib.load(model_path)
-#     scaler = joblib.load(scaler_path)
-#     return model, scaler
+@st.cache_resource
+def load_models():
+    """Load trained model and scaler from the correct location"""
+    import os
+    
+    # Get the directory where this file is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # Go up one level to Portfolio folder, then into Projects
+    base_dir = os.path.dirname(current_dir)
+    
+    # Look for model files in Projects/house_price_prediction/
+    model_path = os.path.join(base_dir, 'Projects', 'house_price_prediction', 'best_model.pkl')
+    scaler_path = os.path.join(base_dir, 'Projects', 'house_price_prediction', 'scaler.pkl')
+    
+    # Debug: print paths to terminal
+    st.write(f"Looking for model at: {model_path}")
+    
+    model = joblib.load(model_path)
+    scaler = joblib.load(scaler_path)
+    return model, scaler
 
 # In pages/1_🏠_House_Price_Predictor.py
 
