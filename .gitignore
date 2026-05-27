@@ -1,9 +1,3 @@
-# .gitignore
-*.pkl
-*.pyc
-__pycache__/
-.env
-.secrets/
 # Python
 __pycache__/
 *.pyc
@@ -31,10 +25,6 @@ venv.bak/
 
 # Streamlit
 .streamlit/
-
-# Large model files (if any)
-*.pkl
-*.joblib
 
 # OS
 .DS_Store
