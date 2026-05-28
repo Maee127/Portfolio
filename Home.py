@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Home.py - Portfolio Homepage
 import streamlit as st
 

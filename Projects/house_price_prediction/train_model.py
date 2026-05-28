@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # train_model.py - Complete training script with model saving
 
 import pandas as pd
