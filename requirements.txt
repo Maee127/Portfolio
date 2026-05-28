@@ -1,8 +1,8 @@
 streamlit
-setuptools
-wheel
 pandas
 numpy
 scikit-learn
 plotly
 joblib
+xgboost
+lightgbm
