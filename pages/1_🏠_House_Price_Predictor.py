@@ -45,18 +45,6 @@ def load_models():
     scaler = joblib.load(scaler_path)
     return model, scaler
 
-# In pages/1_🏠_House_Price_Predictor.py
-
-# @st.cache_resource
-# def load_models():
-#     """Load trained model and scaler from Projects folder"""
-#     # Use absolute path to where your models are
-#     model_path = r'C:\Users\parsayan\VScodes\ML-Portfolio\Portfolio\Projects\house_price_prediction\best_model.pkl'
-#     scaler_path = r'C:\Users\parsayan\VScodes\ML-Portfolio\Portfolio\Projects\house_price_prediction\scaler.pkl'
-    
-#     model = joblib.load(model_path)
-#     scaler = joblib.load(scaler_path)
-#     return model, scaler
 # ============================================
 # SIDEBAR - MODEL INFO
 # ============================================
