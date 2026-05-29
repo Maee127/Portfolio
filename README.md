@@ -27,17 +27,13 @@ Try the app here: [https://portfolio-house-predictor.streamlit.app](https://port
 - Responsive design
 
 ## 📁 Project Structure
+
 ├── Home.py # Main app
+
 ├── pages/ # Streamlit pages
+
 ├── Projects/ # Training code
+
 └── requirements.txt # Dependencies
 
-┌─────────────────────────────────────────┐
-│ [STREAMLIT BADGE]                       │
-├─────────────────────────────────────────┤
-│ # 🏠 California House Price Predictor   │
-│                                         │
-│ Live Demo: [link]                       │
-│ R² Score: 0.859                         │
-│ Tech Stack: Python, Streamlit, XGBoost  │
-└─────────────────────────────────────────┘
+
