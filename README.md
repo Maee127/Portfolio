@@ -36,4 +36,6 @@ Try the app here: [https://portfolio-house-predictor.streamlit.app](https://port
 
 └── requirements.txt # Dependencies
 
+## Diagram
 
+Input form → predicted price → metrics/model comparison
